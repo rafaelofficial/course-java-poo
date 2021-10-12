@@ -1,0 +1,27 @@
+package application;
+
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Matrix {
+
+	public static void main(String[] args) {
+
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+		
+		int x = sc.nextInt();
+		int y = sc.nextInt();
+		int[][] mat = new int[x][y];
+		
+		for (int m=0; m<x; m++) {
+			for (int n=0; n<x; n++) {
+				mat[m][n] = sc.nextInt();
+			}
+		}
+		
+		sc.close();
+
+	}
+
+}
