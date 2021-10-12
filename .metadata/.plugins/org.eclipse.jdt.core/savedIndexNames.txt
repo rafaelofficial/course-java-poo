@@ -1,0 +1,3 @@
+INDEX VERSION 1.131+C:\temp\ws-eclipse\java.completo.orientacao.a.objetos.udemy\.metadata\.plugins\org.eclipse.jdt.core
+356374187.index
+3729101479.index
