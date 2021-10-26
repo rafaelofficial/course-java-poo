@@ -8,14 +8,14 @@ import java.util.List;
 public class Post {
 
 	private static SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
-	
+
 	private Date moment;
 	private String title;
 	private String content;
 	private Integer likes;
-	
+
 	private List<Comment> comments = new ArrayList<>();
-	
+
 	public Post() {
 	}
 
@@ -61,15 +61,15 @@ public class Post {
 	public List<Comment> getComments() {
 		return comments;
 	}
-	
+
 	public void addComment(Comment comment) {
 		comments.add(comment);
 	}
-	
+
 	public void removeComment(Comment comment) {
 		comments.remove(comment);
 	}
-	
+
 	public String toString() {
 		StringBuilder sb = new StringBuilder();
 		sb.append(title + "\n");
