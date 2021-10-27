@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="ShowViewDialog">
-		<item key="ShowViewDialog.STORE_SELECTED_VIEW_ID" value="org.eclipse.eclemma.ui.CoverageView"/>
+		<item key="ShowViewDialog.STORE_SELECTED_VIEW_ID" value="org.eclipse.pde.api.tools.ui.views.apitooling.views.apitoolingview"/>
 		<item key="DIALOG_X_ORIGIN" value="813"/>
 		<item key="DIALOG_Y_ORIGIN" value="241"/>
-		<item key="DIALOG_WIDTH" value="311"/>
-		<item key="DIALOG_HEIGHT" value="439"/>
-		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
+		<item key="DIALOG_WIDTH" value="347"/>
+		<item key="DIALOG_HEIGHT" value="452"/>
+		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.75|0|WINDOWS|1|-13|0|0|0|400|0|0|0|0|3|2|1|34|Segoe UI"/>
 		<list key="ShowViewDialog.STORE_EXPANDED_CATEGORIES_ID">
-			<item value="Java"/>
+			<item value="General"/>
+			<item value="API Tools"/>
 		</list>
 	</section>
 </section>
