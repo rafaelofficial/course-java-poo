@@ -2,7 +2,7 @@ package application;
 
 import entities.Account;
 import entities.BusinessAccount;
-import entities.SavinsAccount;
+import entities.SavingsAccount;
 
 public class Program_ {
 
@@ -12,7 +12,7 @@ public class Program_ {
 		acc1.withdraw(200.0);
 		System.out.println("Account : " + acc1.getBalance());
 		
-		Account acc2 = new SavinsAccount(1002, "Maria", 1000.0, 0.01);
+		Account acc2 = new SavingsAccount(1002, "Maria", 1000.0, 0.01);
 		acc2.withdraw(200);
 		System.out.println("Savins Account : " + acc2.getBalance());
 		

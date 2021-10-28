@@ -2,7 +2,7 @@ package application;
 
 import entities.Account;
 import entities.BusinessAccount;
-import entities.SavinsAccount;
+import entities.SavingsAccount;
 
 public class Program {
 
@@ -15,7 +15,7 @@ public class Program {
 
 		Account acc1 = bacc;
 		Account acc2 = new BusinessAccount(1003, "Bob", 0.0, 200.0);
-		Account acc3 = new SavinsAccount(1004, "Anna", 0.0, 0.01);
+		Account acc3 = new SavingsAccount(1004, "Anna", 0.0, 0.01);
 
 		// DOWNCASTING
 
@@ -29,8 +29,8 @@ public class Program {
 			System.out.println("Loan!");
 		}
 
-		if (acc3 instanceof SavinsAccount) {
-			SavinsAccount acc5 = (SavinsAccount) acc3;
+		if (acc3 instanceof SavingsAccount) {
+			SavingsAccount acc5 = (SavingsAccount) acc3;
 			acc5.updateBalance();
 			System.out.println("Update!");
 		}
