@@ -39,7 +39,7 @@ public class Program {
 				list.add(new Product(name, price));
 
 			} else if (ch == 'u') {
-				System.out.println("Manufacture date (DD/MM/YYYY): ");
+				System.out.print("Manufacture date (DD/MM/YYYY): ");
 				Date date = sdf.parse(sc.next());
 				Product prod = new UsedProduct(name, price, date);
 				list.add(prod);
