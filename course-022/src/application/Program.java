@@ -33,7 +33,7 @@ public class Program {
 		
 		System.out.print("Enter number of installments: ");
 		int N = sc.nextInt();
-		
+		// Injetar a dependêcia new PaypalService()
 		ContractService cs = new ContractService(new PaypalService());
 		cs.processContract(contract, N);
 		

@@ -8,12 +8,18 @@ import model.entities.Installment;
 
 public class ContractService {
 	
+	// Inversão de controle
 	private OnlinePaymentService onlinePaymentService;
 	
+	// Implementação de injeção de dependência
 	public ContractService(OnlinePaymentService onlinePaymentService) {
 		this.onlinePaymentService = onlinePaymentService;
 	}
 
+	/**
+	 * @param contract responsavel por instânciar N objetos que serão as parcelas
+	 * @param months quantidade de parcelas/mês
+	 */
 	public void processContract(Contract contract, int months) {	
 		
 		double basicQuota = contract.getTotalValue() / months;
@@ -23,12 +29,17 @@ public class ContractService {
 			// updatedQuota = 202
 			double fullQuota = updatedQuota + onlinePaymentService.paymentFee(updatedQuota);
 			// fullQuota = 206.04
-			Date dueDate = addMount(contract.getDate(), i);
+			Date dueDate = addMounts(contract.getDate(), i);
 			contract.getInstallments().add(new Installment(dueDate, fullQuota));
 		}
 	}
 
-	private Date addMount(Date date, int N) {
+	/**
+	 * @param date setar a data informada por parâmetro
+	 * @param N adicionar N meses (Calendar.MONDAY) no calendar
+	 * @return retornar a data
+	 */
+	private Date addMounts(Date date, int N) {
 		Calendar calendar = Calendar.getInstance();
 		calendar.setTime(date);
 		calendar.add(Calendar.MONDAY, N);
