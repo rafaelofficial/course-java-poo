@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="java.util.stream.Collector"/>
-    <fullyQualifiedTypeName name="java.util.stream.Collectors"/>
-    <fullyQualifiedTypeName name="entities.EmployeeList"/>
     <fullyQualifiedTypeName name="application.EmployeeListMain"/>
     <fullyQualifiedTypeName name="java.util.TimeZone"/>
     <fullyQualifiedTypeName name="java.time.Instant"/>
@@ -60,4 +57,7 @@
     <fullyQualifiedTypeName name="model.services.ContractService"/>
     <fullyQualifiedTypeName name="model.services.PaypalService"/>
     <fullyQualifiedTypeName name="java.lang.String"/>
+    <fullyQualifiedTypeName name="model.entities.Circle"/>
+    <fullyQualifiedTypeName name="model.entities.Rectangle"/>
+    <fullyQualifiedTypeName name="model.enums.Color"/>
 </qualifiedTypeNameHistroy>
