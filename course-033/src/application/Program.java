@@ -1,15 +1,15 @@
 package application;
 
-import java.util.HashSet;
 import java.util.Set;
+import java.util.TreeSet;
 
 public class Program {
 	public static void main(String[] args) {
 		
 		/**
-		 * HashSet - mais rápido (operação O(1) em tabela hash) e não ordenado
+		 * TreeSet - mais lento (operação O(log(n)) em árvore rubro-negra) e ordenado pelo compareTo do objeto (ou Comparator)
 		 */
-		Set<String> set = new HashSet<>();
+		Set<String> set = new TreeSet<>();
 		
 		set.add("TV");
 		set.add("Tablet");
