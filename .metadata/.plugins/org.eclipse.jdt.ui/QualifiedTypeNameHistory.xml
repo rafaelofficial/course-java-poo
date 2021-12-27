@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="entities.Departament"/>
     <fullyQualifiedTypeName name="entities.HourContract"/>
     <fullyQualifiedTypeName name="entity.Comment"/>
     <fullyQualifiedTypeName name="entity.Post"/>
@@ -30,8 +29,6 @@
     <fullyQualifiedTypeName name="model.entities.Account"/>
     <fullyQualifiedTypeName name="java.lang.RuntimeException"/>
     <fullyQualifiedTypeName name="entities.exception.DomainException"/>
-    <fullyQualifiedTypeName name="java.io.BufferedReader"/>
-    <fullyQualifiedTypeName name="java.io.FileReader"/>
     <fullyQualifiedTypeName name="javax.swing.plaf.basic.BasicComboBoxUI.ItemHandler"/>
     <fullyQualifiedTypeName name="entities.Product"/>
     <fullyQualifiedTypeName name="java.io.BufferedWriter"/>
@@ -58,6 +55,9 @@
     <fullyQualifiedTypeName name="services.BrazilInterestService"/>
     <fullyQualifiedTypeName name="java.security.InvalidParameterException"/>
     <fullyQualifiedTypeName name="services.InterestService"/>
-    <fullyQualifiedTypeName name="java.lang.IllegalStateException"/>
     <fullyQualifiedTypeName name="services.PrintService"/>
+    <fullyQualifiedTypeName name="java.io.BufferedReader"/>
+    <fullyQualifiedTypeName name="java.io.FileReader"/>
+    <fullyQualifiedTypeName name="java.io.IOException"/>
+    <fullyQualifiedTypeName name="java.lang.IllegalStateException"/>
 </qualifiedTypeNameHistroy>

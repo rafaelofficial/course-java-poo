@@ -12,7 +12,7 @@ public class Program {
 		
 		PrintService<String> ps = new PrintService<>();
 		
-		System.out.print("How many values?");
+		System.out.print("How many values? ");
 		int n = sc.nextInt();
 		
 		for (int i = 0; i < n; i++) {
