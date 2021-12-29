@@ -28,6 +28,14 @@ public class Product {
 	public void setPrice(Double price) {
 		this.price = price;
 	}
+	
+	/**
+	 * @param p recebe o produto
+	 * adiciona 10% a cada produto da lista
+	 */
+	public static void staticPriceUpdate(Product p) {
+		p.setPrice(p.getPrice() * 1.1);
+	}
 
 	@Override
 	public String toString() {
