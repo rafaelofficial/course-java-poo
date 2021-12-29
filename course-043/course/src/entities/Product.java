@@ -36,6 +36,13 @@ public class Product {
 	public static void staticPriceUpdate(Product p) {
 		p.setPrice(p.getPrice() * 1.1);
 	}
+	
+	/**
+	 * adiciona 10% a cada produto da lista
+	 */
+	public void nonStaticPriceUpdate() {
+		price = price * 1.1;
+	}
 
 	@Override
 	public String toString() {
