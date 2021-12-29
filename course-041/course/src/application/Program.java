@@ -19,12 +19,7 @@ public class Program {
 		list.add(new Product("TV", 900.00));
 		list.add(new Product("Tablet", 450.00));
 		
-		/**
-		 * Compara a partir do nome, ignorando letras maiusculas e minusculas
-		 */
-		Comparator<Product> comp = (p1, p2) -> p1.getName().toUpperCase().compareTo(p2.getName().toUpperCase());
-		
-		list.sort(comp);
+		list.sort((p1, p2) -> p1.getName().toUpperCase().compareTo(p2.getName().toUpperCase()));
 		
 		for (Product products : list) {
 			System.out.println(products);
