@@ -19,14 +19,11 @@ public class Program {
 		list.add(new Product("TV", 900.00));
 		list.add(new Product("Tablet", 450.00));
 		
-		Comparator<Product> comp = new Comparator<Product>() {
-			/**
-			 * Compara a partir do nome, ignorando letras maiusculas e minusculas
-			 */
-			@Override
-			public int compare(Product p1, Product p2) {
-				return p1.getName().toUpperCase().compareTo(p2.getName().toUpperCase());
-			}
+		/**
+		 * Compara a partir do nome, ignorando letras maiusculas e minusculas
+		 */
+		Comparator<Product> comp = (p1, p2) -> {
+			return p1.getName().toUpperCase().compareTo(p2.getName().toUpperCase());
 		};
 		
 		list.sort(comp);
