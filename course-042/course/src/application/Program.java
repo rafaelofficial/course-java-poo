@@ -20,8 +20,8 @@ public class Program {
 		list.add(new Product("Tablet", 350.50));
 		list.add(new Product("HD Case", 80.90));
 		
-		// Reference method com método estático
-		list.removeIf(Product::staticProductPredicate);
+		// Reference method com método não estático
+		list.removeIf(Product::nonStaticProductPredicate);
 		
 		for (Product p : list) {
 			System.out.println(p);

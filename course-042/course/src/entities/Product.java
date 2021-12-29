@@ -30,11 +30,17 @@ public class Product {
 	}
 	
 	/**
+	 * método estático trabalha com o próprio objeto passado como argumento
 	 * @param p recebe um produto
 	 * @return retira da lista produtos com o preço acima de 100.00
 	 */
 	public static boolean staticProductPredicate(Product p) {
 		return p.getPrice() >= 100.0;
+	}
+	
+	// método não estático trabalha com o próprio objeto da classe
+	public boolean nonStaticProductPredicate() {
+		return price >= 100.0;
 	}
 
 	@Override
