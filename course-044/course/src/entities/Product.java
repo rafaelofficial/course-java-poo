@@ -28,6 +28,14 @@ public class Product {
 	public void setPrice(Double price) {
 		this.price = price;
 	}
+	
+	/**
+	 * @param p recebe o produto
+	 * @return transforma uma lista de nomes com as letras maíusculas
+	 */
+	public static String staticUpperCaseName(Product p) {
+		return p.getName().toUpperCase();
+	}
 
 	@Override
 	public String toString() {
