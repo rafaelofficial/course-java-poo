@@ -36,6 +36,13 @@ public class Product {
 	public static String staticUpperCaseName(Product p) {
 		return p.getName().toUpperCase();
 	}
+	
+	/**
+	 * @return transforma uma lista de nomes com as letras maíusculas
+	 */
+	public String nonStaticUpperCaseName() {
+		return name.toUpperCase();
+	}
 
 	@Override
 	public String toString() {
