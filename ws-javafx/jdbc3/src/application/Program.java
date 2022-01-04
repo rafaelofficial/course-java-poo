@@ -2,7 +2,9 @@ package application;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 
@@ -15,10 +17,14 @@ public class Program {
 		/**
 		 * TODO: 
 		 * 1 - Conectar banco de dados
-		 * 2 - Instanciar o preparedStatement (insersao SQL)	
+		 * 2 - Instanciar o preparedStatement (insersao SQL)
 		 * 3 - Instanciar os valores no preparedStatement (montar os comandos SQL (atribuir os valores para cada (?) ))
-		 * 4 - Executar os comandos com o excuteUpdate()
-		 * 5 - Fechar conexoes
+		 * 4 - Inserçao com recuperaçao de Id (Statement.RETURN_GENERETED_KEYS)
+		 * 5 - Executar os comandos com o excuteUpdate()
+		 * 6 - Fazer tratamento para que, caso uma linha seja alterada exibir o id inserido:
+		 * Se rowsAffect for maior do que 0 então mostrar a chave que foi gerada. 
+		 * Senão mostrar mensagem informando que nenhuma linha foi aferada. 
+		 * 7 - Fechar conexoes
 		 */
 		
 		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
@@ -32,7 +38,8 @@ public class Program {
 					"INSERT INTO seller " 
 					+ "(Name, Email, BirthDate, BaseSalary, DepartmentId) "
 					+ "VALUES "
-					+ "(?, ?, ?, ?, ?)");
+					+ "(?, ?, ?, ?, ?)",
+					Statement.RETURN_GENERATED_KEYS);
 			
 			st.setString(1, "Carl Purple");
 			st.setString(2, "purple@gmail.com");
@@ -42,8 +49,16 @@ public class Program {
 			
 			int rowsAffected = st.executeUpdate();
 			
-			System.out.println("Done! Rows Affected: " + rowsAffected);
-		} catch (SQLException e) {
+			if (rowsAffected > 0) {
+				ResultSet rs = st.getGeneratedKeys();
+				while (rs.next()) {
+					int id = rs.getInt(1);
+					System.out.println("Done! Id = " + id);
+				}
+			} else {
+				System.out.println("No rown affected!");
+			}
+ 		} catch (SQLException e) {
 			e.printStackTrace();
 		} catch (ParseException e) {
 			e.printStackTrace();
